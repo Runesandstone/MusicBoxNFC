@@ -7,7 +7,7 @@
 #define SS_PIN 17   // cs
 
 
-#define TARJETA 0xA2B306D7 //define aqui la id de los tags NFC 
+#define NFC1 00000000 //define aqui la id de los tags NFC 
 
 
 
@@ -72,15 +72,15 @@ void loop() {
     }
     switch (identificador)
     {
-
-      case 2726813188:
+///modifica los valores de cada Case segun el ID del Tag que hayas definido anteriormente
+      case NFC1:
           myDFPlayer.loopFolder(1);
           digitalWrite(rojo, LOW);
           digitalWrite(verde, HIGH);
           delay(2000);
           digitalWrite(verde, LOW);
           break;
-      case 2726812932:
+      case NFC2: 
           myDFPlayer.loopFolder(2);
           digitalWrite(rojo, HIGH);
           digitalWrite(verde, LOW);
